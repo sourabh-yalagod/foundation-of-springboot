@@ -16,13 +16,13 @@ import java.util.Objects;
 @RequestMapping("/api")
 public class BeanTypes {
 
-//    @Autowired
-//    private RequestBean requestBean;  // proxy injected here
-//
-//    @GetMapping("")
-//    public String getResponse() {
-//        return requestBean.getResponse();
-//    }
+    @Autowired
+    private RequestBean requestBean;  // proxy injected here
+
+    @GetMapping("")
+    public String getResponse() {
+        return requestBean.getResponse();
+    }
 }
 
 @Component
@@ -59,8 +59,8 @@ class DBConnection {
 
     public DBConnection() {
         System.out.println("Bean Created : " + this.hashCode());
-        System.out.println("NonSqlDbConnection : "+ Objects.nonNull(nonSqlDbConnection));
-        System.out.println("SqlDbConnection : "+ Objects.nonNull(sqlConnection));
+        System.out.println("NonSqlDbConnection : " + Objects.nonNull(nonSqlDbConnection));
+        System.out.println("SqlDbConnection : " + Objects.nonNull(sqlConnection));
     }
 }
 
