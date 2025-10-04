@@ -13,12 +13,9 @@ import java.sql.Statement;
 @RequestMapping("/api/jdbc")
 public class Jdbc {
 
-//    String dbUrl = "jdbc:postgresql://ep-blue-king-ad4eyntd-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb?sslmode=require";
-//    String username = "neondb_owner";
-//    String password = "npg_VRIbkYcht10l";
-    String getDbUrl = "";
-    String username = "";
-    String password = "";
+    String dbUrl = "jdbc:postgresql://ep-blue-king-ad4eyntd-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb?sslmode=require";
+    String username = "neondb_owner";
+    String password = "npg_VRIbkYcht10l";
 
     @GetMapping("")
     public String jdbcTest() {
